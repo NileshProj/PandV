@@ -290,6 +290,10 @@ body {
     height: 100%;
   }
 
+  .box-shadow {
+    box-shadow: 3px 2px 5px 0px lightgray;
+  }
+
   .box {
     height: 110px;
     padding: 20px;
