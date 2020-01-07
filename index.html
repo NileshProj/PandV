@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <title>Application</title>
+  <style>
+    body {
+      font-size: .875rem;
+    }
+
+    .feather {
+      width: 16px;
+      height: 16px;
+      vertical-align: text-bottom;
+    }
+
+    /*
+ * Sidebar
+ */
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      /* Behind the navbar */
+      padding: 70px 0 0;
+      /* Height of navbar */
+      box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    }
+
+    .sidebar-sticky {
+      position: relative;
+      top: 0;
+      height: calc(100vh - 48px);
+      padding-top: .5rem;
+      overflow-x: hidden;
+      overflow-y: auto;
+      /* Scrollable contents if viewport is shorter than content. */
+    }
+
+    @supports ((position: -webkit-sticky) or (position: sticky)) {
+      .sidebar-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+      }
+    }
+
+    .sidebar .nav-link {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .sidebar .nav-link .feather {
+      margin-right: 4px;
+      color: #999;
+    }
+
+    .sidebar .nav-link.active {
+      color: #fff;
+      background-color: rgb(111, 101, 100);
+    }
+
+    .sidebar .nav-link:hover .feather,
+    .sidebar .nav-link.active .feather {
+      color: inherit;
+    }
+
+    .sidebar-heading {
+      font-size: .75rem;
+      text-transform: uppercase;
+    }
+
+    /*
+ * Content
+ */
+
+    [role="main"] {
+      padding-top: 133px;
+      /* Space for fixed navbar */
+    }
+
+    @media (min-width: 768px) {
+      [role="main"] {
+        padding-top: 48px;
+        /* Space for fixed navbar */
+      }
+    }
+
+    /*
+ * Navbar
+ */
+
+    .navbar-brand {
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+      font-size: 1rem;
+      background-color: rgba(0, 0, 0, .25);
+      box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+    }
+
+    .navbar .form-control {
+      padding: .75rem 1rem;
+      border-width: 0;
+      border-radius: 0;
+    }
+
+    .form-control-dark {
+      color: #fff;
+      background-color: rgba(255, 255, 255, .1);
+      border-color: rgba(255, 255, 255, .1);
+    }
+
+    .form-control-dark:focus {
+      border-color: transparent;
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+    }
+
+    .m-r-50 {
+      margin-right: 50px;
+    }
+
+    .m-l-50 {
+      margin-left: 50px;
+    }
+
+    .m-l-250 {
+      margin-left: 250px;
+    }
+
+    .m-t-100 {
+      margin-top: 100px;
+    }
+
+    .m-t-5 {
+      margin-top: 5px;
+      ;
+    }
+
+    .m-t-10 {
+      margin-top: 10px;
+    }
+
+    .search {
+      border-radius: 20px;
+      width: 255px;
+      padding: 6px;
+      margin: 7px;
+      background-color: rgb(145, 5, 45);
+      border: 0;
+      color: #fff;
+    }
+
+    .profile-pic {
+      border-radius: 150px;
+      border: 1px solid gray;
+      margin: 25px;
+    }
+
+    .m-t-50 {
+      margin-top: 50px;
+    }
+
+    .m-20 {
+      margin: 20px;
+    }
+
+    .bg-maroon {
+      background-color: rgba(157, 0, 53, 1) !important;
+    }
+
+    .m-l-150 {
+      margin-left: 150px;
+    }
+    .m-l-10 {
+      margin-left: 10px;
+    }
+    .search-icon {
+      position: relative;
+      right: 35px;
+      color: #fff;
+    }
+
+    .m-r-10 {
+      margin-right: 10px;
+    }
+
+    .m-r-5 {
+      margin-right: 5px;
+    }
+
+    .m-r-50 {
+      margin-right: 50px;
+    }
+
+    .p-l-10 {
+      padding-left: 10px;
+    }
+
+    .p-r-10 {
+      padding-right: 10px;
+    }
+
+    .border-left {
+      border-left: 1px solid #ffffff;
+    }
+
+    .white {
+      color: #fff;
+    }
+
+    .bg-brown {
+      background-color: rgb(90, 78, 78);
+    }
+
+    .bg-brown.active {
+      color: #fff;
+      background-color: rgb(111, 101, 100);      
+      
+    }
+
+    .list-group-item,
+    .list-group-item.active {
+      border-color: rgb(105, 93, 93);
+      border-left: 2px solid red;
+    }
+
+    .sidebar .nav-link {
+      color: rgb(171, 160, 161);
+    }
+
+    .tab-name {
+      width: 200px;
+      border-bottom: 2px solid red !important;
+      color: #000;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .p-r-0 {
+      padding-right: 0;
+    }
+    .p-l-0 {
+      padding-left: 0;
+    }
+    .text-red {
+      color: rgb(189, 0, 57);
+    }
+
+    .btn-red {
+      background-color: rgb(230, 74, 25);
+    }
+
+    .top {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .bg-dark-gray {
+      background-color: rgb(237, 240, 247);
+    }
+
+    .bg-gray {
+      background-color: rgb(245, 246, 250);
+    }
+
+    .full-width {
+      width: 100%;
+      height: 50px;
+      padding: 10px;
+    }
+
+    .card {
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-maroon p-3">
+      <img src="images/pnv logo.jpg" height="50">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse m-l-250" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Portfolio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Customers</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li> -->
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="mr-sm-2 search" type="text" placeholder="Search by Customer Id or email id" aria-label="Search">
+          <i class="fa fa-search fa-lg search-icon" aria-hidden="true"></i>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active  m-r-50 ">
+              <i class="fa fa-bell fa-lg m-t-10 white" aria-hidden="true"></i>
+            </li>
+            <li class="nav-item border-left p-l-10">
+              <span>
+                <i class="fa fa-user-circle-o fa-2x m-t-5" aria-hidden="true"></i>
+              </span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Carls Honjs</a>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block bg-brown sidebar">
+        <div class="sidebar-sticky ">
+          <ul class="nav flex-column list-group  list-group-flush">
+            <li class="nav-item list-group-item bg-brown active">
+              <a class="nav-link active" href="#">
+                <span data-feather="home"></span>
+                <i class="fa fa-user-circle fa-lg m-r-10" aria-hidden="true"></i>
+                Profile <span class="sr-only">(current)</span>
+                <i class="fa fa-arrow-left  white m-t-5 fa-lg float-right" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="nav-item list-group-item bg-brown">
+              <a class="nav-link" href="#">
+                <span data-feather="file"></span>
+                <i class="fa fa-dashboard fa-lg m-r-10" aria-hidden="true"></i>
+                Simulations
+              </a>
+            </li>
+            <li class="nav-item list-group-item bg-brown">
+              <a class="nav-link" href="#">
+                <span data-feather="file"></span>
+                <i class="fa fa-dashboard fa-lg m-r-10" aria-hidden="true"></i>
+                Need Analysis
+              </a>
+            </li>
+            <li class="nav-item list-group-item bg-brown">
+              <a class="nav-link" href="#">
+                <span data-feather="file"></span>
+                <i class="fa fa-dashboard fa-lg m-r-10" aria-hidden="true"></i>
+                MFID
+              </a>
+            </li>
+            <li class="nav-item list-group-item bg-brown">
+              <a class="nav-link" href="#">
+                <span data-feather="file"></span>
+                <i class="fa fa-dashboard fa-lg m-r-10" aria-hidden="true"></i>
+                Product Selection
+              </a>
+            </li>
+            <li class="nav-item list-group-item bg-brown">
+              <a class="nav-link" href="#">
+                <span data-feather="file"></span>
+                <i class="fa fa-dashboard fa-lg m-r-10" aria-hidden="true"></i>
+                Offers & Proposals
+              </a>
+            </li>
+            <li class="nav-item list-group-item bg-brown">
+              <a class="nav-link" href="#">
+                <span data-feather="file"></span>
+                <i class="fa fa-dashboard fa-lg m-r-10" aria-hidden="true"></i>
+                Documents
+              </a>
+            </li>
+          </ul>
+
+          <!-- <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Saved reports</span>
+            <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+              <span data-feather="plus-circle"></span>
+            </a>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Current month
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Last quarter
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Social engagement
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Year-end sale
+              </a>
+            </li>
+          </ul> -->
+        </div>
+      </nav>
+    </div>
+    <div class="row m-t-100">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-10">
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active tab-name" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+              aria-controls="nav-home" aria-selected="true">Charl Robbrt</a>
+              <i class="fa fa-plus-circle fa-2x m-l-10 m-t-5 text-red" aria-hidden="true"></i>
+              
+            <!-- <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a> -->
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="row m-t-10">
+              <div class="col-lg-6">
+                <div class="card m-t-10">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <img src="images/user.png" height="150" width="150" class="profile-pic" alt="Name">
+                    </div>
+                    <div class="col-lg-8">
+                      <div class="card-body m-t-50">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">123, Alex Appartment, Test West</p>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row m-20">
+                    <div class="col-lg-12">
+                      <h5 class="card-title text-red">Contact & Additional Details</h5>
+                      <i class="fa fa-pencil-square-o float-right fa-2x top text-red" aria-hidden="true"></i>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <ul class="nav flex-column mb-2">
+                            <li class="nav-item">
+                              <i class="fa fa-mobile fa-lg m-r-10" aria-hidden="true"></i> +01 9097 969 940
+                            </li>
+                            <li class="nav-item">
+                              <i class="fa fa-mobile fa-lg m-r-10" aria-hidden="true"></i> +01 9097 969 940
+                            </li>
+                            <li class="nav-item">
+                              <i class="fa fa-envelope-o m-r-5" aria-hidden="true"></i> not found
+                            </li>
+                          </ul>
+                          <br><br>
+                          <div>
+                            <ul class="nav flex-column mb-2">
+                              <li class="nav-item">
+                                <strong>D.O.B:</strong>30/03/1989
+                              </li>
+                              <li class="nav-item">
+                                <strong>Gender: </strong>Male
+                              </li>
+                              <li class="nav-item">
+                                <strong>Profession: </strong> Designer
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <ul class="nav flex-column mb-2">
+                            <li class="nav-item">
+                              <i class="fa fa-mobile fa-lg m-r-10" aria-hidden="true"></i> +01 9097 369 940
+                            </li>
+                            <li class="nav-item">
+                              <i class="fa fa-mobile fa-lg m-r-10" aria-hidden="true"></i> +01 9097 969 940
+                            </li>
+                            <li class="nav-item">
+                              <i class="fa fa-envelope-o m-r-5" aria-hidden="true"></i> abc@text.com
+                            </li>
+                          </ul>
+                          <br><br>
+                          <div>
+                            <ul class="nav flex-column mb-2">
+                              <li class="nav-item">
+                                <strong>Marrital Status:</strong>Married
+                              </li>
+                              <li class="nav-item">
+                                <strong>ID Card: </strong>DL
+                              </li>
+                              <li class="nav-item">
+                                <strong>Valid Till: </strong> 12/2020
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="card m-t-10">
+                  <div class="card-body">
+                    <h5 class="card-title text-red">Existing Contracts</h5>
+                    <br>
+                    <div class="row">
+                      <div class="col-sm-6 p-r-0">
+                        <div class="card bg-dark-gray">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-lg-3">
+                                <i class="fa fa-money fa-2x" aria-hidden="true"></i>
+                              </div>
+                              <div class="col-lg-9">
+                                <h5>45454533-3040</h5>
+                                <p class="card-text">Pension Savings</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 p-l-0">
+                        <div class="card bg-gray">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-lg-3">
+                                <i class="fa fa-car fa-2x" aria-hidden="true"></i>
+                              </div>
+                              <div class="col-lg-9">
+                                <h5>45454533-3040</h5>
+                                <p class="card-text">Car</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <br><br>
+                    <br><br>
+                    <h5 class="card-title text-red">Offers and Proposals</h5>
+                    <a href="#" class="btn btn-red white full-width">Create New</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+          <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
