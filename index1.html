@@ -315,6 +315,34 @@
             /* Should be removed. Only for demonstration */
         }
 
+        .row-field {
+            display: flex;
+            margin-top: -9px;
+            margin-bottom: -10px;
+            margin-left: -12px;
+        }
+
+        /* Create two equal columns that sits next to each other */
+        .column-field {
+            flex: 50%;
+            padding: 10px;
+            height: 100%;
+            /* Should be removed. Only for demonstration */
+        }
+
+        .column-icon {
+            flex: 50%;
+            padding: 10px;
+            height: 100%;
+            /* Should be removed. Only for demonstration */
+        }
+
+        .info-icon {
+            font-size: 35px;
+            margin-top: -4%;
+            margin-left: 55%;
+        }
+
         .input-label {
             margin-bottom: 0.75rem;
         }
@@ -324,13 +352,13 @@
         }
 
         .slidecontainer {
-            width: 100%;
+            width: 260%;
         }
 
         .slider {
             -webkit-appearance: none;
-            width: 100%;
-            height: 15px;
+            width: 150%;
+            height: 8px;
             border-radius: 5px;
             background: #d3d3d3;
             outline: none;
@@ -346,10 +374,10 @@
         .slider::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 25px;
-            height: 25px;
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
-            background: #4CAF50;
+            background: gray;
             cursor: pointer;
         }
 
@@ -360,6 +388,101 @@
             background: #4CAF50;
             cursor: pointer;
         }
+
+        .input-width {
+            width: 160%;
+        }
+
+        .input-range-slider {
+            width: 26%;
+            font-size: 0.75rem;
+            margin-left: 50%;
+            margin-top: -4%;
+            height: 28px;
+            text-align: center;
+        }
+
+        .input-width-simulation {
+            width: 60%;
+            margin-left: 2%;
+            margin-top: 5%;
+        }
+
+        .review {
+            margin-left: 2%;
+            margin-top: 8%;
+        }
+
+        .label-color {
+            color: grey;
+        }
+
+        .row-field-review {
+            display: flex;
+            margin-top: 1%;
+            margin-bottom: -10px;
+            margin-left: -12px;
+        }
+
+        .column-field-vapz {
+            flex: 50%;
+            padding: 10px;
+            height: 100%;
+            margin-left: 7%;
+            /* Should be removed. Only for demonstration */
+        }
+
+        .column-field-ipt {
+            flex: 50%;
+            padding: 10px;
+            height: 100%;
+            margin-left: -43%;
+            /* Should be removed. Only for demonstration */
+        }
+
+        .column-review-icon-vapz {
+            flex: 50%;
+            padding: 10px;
+            height: 100%;
+            margin-top: -13%;
+            margin-left: -76%;
+            /* Should be removed. Only for demonstration */
+        }
+
+        .column-review-icon-ipt {
+            flex: 50%;
+            padding: 10px;
+            height: 100%;
+            margin-top: -13%;
+            margin-left: -63%;
+            /* Should be removed. Only for demonstration */
+        }
+
+        .review-values {
+            font-weight: bold;
+            font-size: larger;
+        }
+
+        .change::-webkit-input-placeholder {
+            /* WebKit, Blink, Edge */
+            color: white;
+        }
+
+        .change:-moz-placeholder {
+            /* Mozilla Firefox 4 to 18 */
+            color: white;
+        }
+
+        .change::-moz-placeholder {
+            /* Mozilla Firefox 19+ */
+            color: white;
+        }
+
+        .change:-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: white;
+        }
+
     </style>
 </head>
 
@@ -373,10 +496,10 @@
             </button>
             <div class="collapse navbar-collapse m-l-250" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item ">
                         <a class="nav-link" href="#">Portfolio <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="#">Customers</a>
                     </li>
                     <!-- <li class="nav-item">
@@ -385,7 +508,7 @@
                 </ul>
                 <form class="form-inline mt-2 mt-md-0">
                     <input class="mr-sm-2 search" type="text" placeholder="Search by Customer Id or email id"
-                        aria-label="Search">
+                        class="change" aria-label="Search">
                     <i class="fa fa-search fa-lg search-icon" aria-hidden="true"></i>
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active  m-r-50 ">
@@ -410,19 +533,19 @@
             <nav class="col-md-2 d-none d-md-block bg-brown sidebar">
                 <div class="sidebar-sticky ">
                     <ul class="nav flex-column list-group  list-group-flush">
-                        <li class="nav-item list-group-item bg-brown active">
-                            <a class="nav-link active" href="#">
+                        <li class="nav-item list-group-item bg-brown ">
+                            <a class="nav-link " href="#">
                                 <span data-feather="home"></span>
                                 <i class="fa fa-user-circle fa-lg m-r-10" aria-hidden="true"></i>
-                                Profile <span class="sr-only">(current)</span>
-                                <i class="fa fa-arrow-left  white m-t-5 fa-lg float-right" aria-hidden="true"></i>
+                                Profile
                             </a>
                         </li>
-                        <li class="nav-item list-group-item bg-brown">
-                            <a class="nav-link" href="#">
+                        <li class="nav-item list-group-item bg-brown active">
+                            <a class="nav-link active" href="#">
                                 <span data-feather="file"></span>
                                 <i class="fa fa-dashboard fa-lg m-r-10" aria-hidden="true"></i>
-                                Simulations
+                                Simulations <span class="sr-only">(current)</span>
+                                <i class="fa fa-arrow-left  white m-t-5 fa-lg float-right" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li class="nav-item list-group-item bg-brown">
@@ -499,7 +622,7 @@
         </div>
         <div class="row m-t-100">
             <div class="col-lg-2"></div>
-            <div class="col-lg-10">
+            <div class="col-lg-10" style="margin-top: 12px;">
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                         <a class="nav-item nav-link active tab-name" id="nav-home-tab" data-toggle="tab"
@@ -522,54 +645,137 @@
                                     <div class="card-body">
                                         <h5 class="card-title text-red">Information needed to get started</h5>
                                         <div class="form-group input-label-top input-label">
-                                            <label for="yearlynetsalary">Yearly Net Salary</label>
-                                            <input type="number" class="form-control" id="yearlynetsalary"
-                                                placeholder="55,000" disabled>
-                                            <!-- <div class="input-group-append">
-                                                <span class="input-group-text" id="basic-addon2">@example.com</span>
-                                            </div> -->
+                                            <label class="label-color" for="yearlynetsalary">Yearly Net Salary</label>
+                                            <div class="row row-field">
+                                                <div class="column column-field">
+                                                    <input type="number" class="form-control input-width"
+                                                        id="yearlynetsalary" placeholder="55,000" disabled>
+                                                </div>
+                                                <div class="column column-icon">
+                                                    <div class="input-group-append">
+                                                        <span class="info-icon">&#9432</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="form-group input-label">
-                                            <label for="yearlygrosssalary">Yearly Gross Salary</label>
-                                            <input type="number" class="form-control" id="yearlygrosssalary"
-                                                placeholder="200,000" disabled>
+                                            <label class="label-color" for="yearlygrosssalary">Yearly Gross
+                                                Salary</label>
+                                            <div class="row row-field">
+                                                <div class="column column-field">
+                                                    <input type="number" class="form-control input-width"
+                                                        id="yearlygrosssalary" placeholder="200,000" disabled>
+                                                </div>
+                                                <div class="column column-icon">
+                                                    <div class="input-group-append">
+                                                        <span class="info-icon">&#9432</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="form-group input-label">
-                                            <label for="employementdate">Employement Date</label>
-                                            <input type="number" class="form-control" id="employementdate"
-                                                placeholder="23/05/2019" disabled>
+                                            <label class="label-color" for="employementdate">Employement Date</label>
+                                            <div class="row row-field">
+                                                <div class="column column-field">
+                                                    <input type="number" class="form-control input-width"
+                                                        id="employementdate" placeholder="23/05/2019" disabled>
+                                                </div>
+                                                <div class="column column-icon">
+                                                    <div class="input-group-append">
+                                                        <span class="info-icon">&#9432</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="form-group input-label">
-                                            <label for="estimatedlegalpension">Estimated Legal Pension</label>
-                                            <input type="number" class="form-control" id="estimatedlegalpension"
-                                                placeholder="42,400" disabled>
+                                            <label class="label-color" for="estimatedlegalpension">Estimated Legal
+                                                Pension</label>
+                                            <div class="row row-field">
+                                                <div class="column column-field">
+                                                    <input type="number" class="form-control input-width"
+                                                        id="estimatedlegalpension" placeholder="42,400" disabled>
+                                                </div>
+                                                <div class="column column-icon">
+                                                    <div class="input-group-append">
+                                                        <span class="info-icon">&#9432</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="form-group input-label">
-                                            <label for="pensionage">Pension Age</label>
-                                            <input type="number" class="form-control" id="pensionage" placeholder="67"
-                                                disabled>
+                                            <label class="label-color" for="pensionage">Pension Age</label>
+                                            <div class="row row-field">
+                                                <div class="column column-field">
+                                                    <input type="number" class="form-control input-width"
+                                                        id="pensionage" placeholder="67" disabled>
+                                                </div>
+                                                <div class="column column-icon">
+                                                    <div class="input-group-append">
+                                                        <span class="info-icon">&#9432</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="column">
                                     <div class="card-body">
                                         <h5 class="card-title text-red">Fiscal Optimizer</h5>
-                                        <div class="slidecontainer">
-                                            <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
-                                            <input type="number" class="form-control" placeholder="0" id="input-demo"
-                                                disabled>
-                                            <p>Value: <span id="demo"></span></p>
-                                        </div>
-                                        <script>
-                                            var slider = document.getElementById("myRange");
-                                            var output = document.getElementById("demo");
-                                            output.innerHTML = slider.value;
+                                        <div class="row row-field ">
+                                            <div class="column column-field">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <input type="range" min="0" max="100"
+                                                            class="form-control-range slider" id="myRange">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="column column-field">
+                                                <input type="number" class="form-control input-range-slider"
+                                                    placeholder="0" id="input-demo" disabled>
+                                            </div>
+                                            <script>
+                                                var slider = document.getElementById("myRange");
+                                                var output = document.getElementById("input-demo");
+                                                output.innerHTML = slider.value;
 
-                                            slider.oninput = function () {
-                                                output.innerHTML = this.value;
-                                                document.querySelector("#input-demo").value = this.value;
-                                            }
-                                        </script>
+                                                slider.oninput = function () {
+                                                    output.innerHTML = this.value;
+                                                    document.querySelector("#input-demo").value = this.value;
+                                                }
+                                            </script>
+                                        </div>
+                                        <input type="number" class="form-control input-width-simulation"
+                                            id="simulationinput" placeholder="24,548,56" disabled>
+                                        <h5 class="card-title text-red review">Review VAPZ and IPT</h5>
+                                        <div class="row row-field-review">
+                                            <div class="column column-field-vapz">
+                                                <label class="label-color" for="vapz">VAPZ</label>
+                                                <div>
+                                                    <div>
+                                                        <p class="review-values">200,000</p>
+                                                    </div>
+                                                    <div class="column column-review-icon-vapz">
+                                                        <div class="input-group-append">
+                                                            <span class="info-icon">&#9432</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="column column-field-ipt">
+                                                <label class="label-color" for="ipt">IPT</label>
+                                                <div>
+                                                    <div>
+                                                        <p class="review-values">21,2,91.80</p>
+                                                    </div>
+                                                    <div class="column column-review-icon-ipt">
+                                                        <div class="input-group-append">
+                                                            <span class="info-icon">&#9432</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
