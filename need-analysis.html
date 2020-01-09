@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <title>Application</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-maroon p-3">
+      <img src="images/pnv logo.jpg" height="50">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse m-l-250" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Portfolio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="customer-details.html">Customers</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li> -->
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="mr-sm-2 search" type="text" placeholder="Search by Customer Id or email id" aria-label="Search">
+          <i class="fa fa-search fa-lg search-icon" aria-hidden="true"></i>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item  m-r-50 ">
+              <i class="fa fa-bell fa-lg m-t-10 white" aria-hidden="true"></i>
+            </li>
+            <li class="nav-item border-left p-l-10">
+              <span>
+                <i class="fa fa-user-circle-o fa-2x m-t-5 m-l-10" aria-hidden="true"></i>
+              </span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Carls Honjs</a>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block bg-brown sidebar">
+        <div class="sidebar-sticky ">
+          <ul class="nav flex-column list-group  list-group-flush">
+            <li class="nav-item list-group-item bg-brown">
+              <a class="nav-link" href="#">
+                <span data-feather="home"></span>
+                <i class="fa fa-user-circle fa-lg m-r-10" aria-hidden="true"></i>
+                Profile <span class="sr-only">(current)</span>
+                <i class="fa fa-arrow-left  white m-t-5 fa-lg float-right" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="nav-item list-group-item bg-brown">
+              <a class="nav-link" href="simulation-tab.html">
+                <span data-feather="file"></span>
+                <i class="fa fa-dashboard fa-lg m-r-10" aria-hidden="true"></i>
+                Simulations
+              </a>
+            </li>
+            <li class="nav-item list-group-item bg-brown active">
+              <a class="nav-link active" href="#">
+                <span data-feather="file"></span>
+                <i class="fa fa-dashboard fa-lg m-r-10" aria-hidden="true"></i>
+                Need Analysis
+              </a>
+            </li>
+            <li class="nav-item list-group-item bg-brown">
+              <a class="nav-link" href="#">
+                <span data-feather="file"></span>
+                <i class="fa fa-dashboard fa-lg m-r-10" aria-hidden="true"></i>
+                MFID
+              </a>
+            </li>
+            <li class="nav-item list-group-item bg-brown">
+              <a class="nav-link" href="#">
+                <span data-feather="file"></span>
+                <i class="fa fa-dashboard fa-lg m-r-10" aria-hidden="true"></i>
+                Product Selection
+              </a>
+            </li>
+            <li class="nav-item list-group-item bg-brown">
+              <a class="nav-link" href="#">
+                <span data-feather="file"></span>
+                <i class="fa fa-dashboard fa-lg m-r-10" aria-hidden="true"></i>
+                Offers & Proposals
+              </a>
+            </li>
+            <li class="nav-item list-group-item bg-brown">
+              <a class="nav-link" href="#">
+                <span data-feather="file"></span>
+                <i class="fa fa-dashboard fa-lg m-r-10" aria-hidden="true"></i>
+                Documents
+              </a>
+            </li>
+          </ul>
+
+          <!-- <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Saved reports</span>
+            <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+              <span data-feather="plus-circle"></span>
+            </a>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Current month
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Last quarter
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Social engagement
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Year-end sale
+              </a>
+            </li>
+          </ul> -->
+        </div>
+      </nav>
+    </div>
+    <div class="row m-t-100">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-10">
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active tab-name" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+              aria-controls="nav-home" aria-selected="true">Charl Robbrt > Need Analysis</a>
+            <div class="btn-group dropright">
+              <i class="fa fa-plus-circle fa-2x m-l-10 m-t-5 text-red" id="dropdownMenu" data-toggle="dropdown"
+                data-reference="parent"></i>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+                <span class="dropdown-item-text">Offers</span>
+                <a class="dropdown-item" href="#">Contracts</a>
+                <a class="dropdown-item" href="#">Proposals</a>
+                <a class="dropdown-item" href="#">Documents</a>
+              </div>
+            </div>
+
+            <!-- <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a> -->
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="card">
+                  <div class="row">
+                    <div class="col-lg-6 m-t-20">
+                        <h5 class="card-title text-red p-l-10 p-t-10">Specification details for pension</h5>
+                        <div class="p-l-10">
+                            <form>
+                                <div class="row">
+                                    <div class="col-lg-9 p-r-0">
+                                        <div class="form-group">
+                                            <label for="one">Required pension capital</label>
+                                            <input type="text" class="form-control " value="50.000" id="one">
+                                      
+                                          </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <i class="fa fa-info-circle fa-2x m-t-30"></i>
+                                    </div>
+                                </div>
+                                <div class="row">  
+                                    <div class="col-lg-9 p-r-0">
+                                        <div class="form-group">
+                                            <label for="two">Required death capital</label>
+                                            <input type="text" class="form-control " value="200.000" id="two">
+                                      
+                                          </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <i class="fa fa-info-circle fa-2x m-t-30"></i>
+                                    </div>
+                                </div>
+                                <div class="row">  
+                                    <div class="col-lg-9 p-r-0">
+                                        <div class="form-group">
+                                            <label for="two">Required death capital</label>
+                                            <br>
+                                            <div class="btn-group btn-group-sm" role="group" aria-label="">
+                                                <button type="button" class="btn btn-red white">Yes</button>
+                                                <button type="button" class="btn btn-secondary">No</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <i class="fa fa-info-circle fa-2x m-t-30"></i>
+                                    </div>
+                                </div>
+                                <div class="row">  
+                                    <div class="col-lg-9 p-r-0">
+                                        <div class="form-group">
+                                            <label for="two">Do you want to pay single premium?</label>
+                                            <br>
+                                            <div class="btn-group btn-group-sm" role="group" aria-label="">
+                                                <button type="button" class="btn btn-red white">Yes</button>
+                                                <button type="button" class="btn btn-secondary">No</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                    </div>
+                                </div>
+                              </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                       <div class="bg-light p-l-20 p-t-20" style="height: 100%;">
+                        <h5 class="card-title text-red p-l-10 p-t-10">Financial objective</h5>
+                        <form>
+
+                            <div class="row">  
+                                <div class="col-lg-9 p-r-0">
+                                    <div class="form-group">
+                                        <label for="two">Death Cover</label>
+                                        <br>
+                                        <div class="btn-group btn-group-sm" role="group" aria-label="">
+                                            <button type="button" class="btn btn-red white">Yes</button>
+                                            <button type="button" class="btn btn-secondary">No</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                </div>
+                            </div>
+                            <div class="row">  
+                                <div class="col-lg-9 p-r-0">
+                                    <div class="form-group">
+                                        <label for="two">Invalidity Coverage</label>
+                                        <br>
+                                        <div class="btn-group btn-group-sm" role="group" aria-label="">
+                                            <button type="button" class="btn btn-red white">Yes</button>
+                                            <button type="button" class="btn btn-secondary">No</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                </div>
+                            </div>
+                            <div class="row">  
+                                <div class="col-lg-9 p-r-0">
+                                    <div class="form-group">
+                                        <label for="two">Accidental Coverage</label>
+                                        <br>
+                                        <div class="btn-group btn-group-sm" role="group" aria-label="">
+                                            <button type="button" class="btn btn-red white">Yes</button>
+                                            <button type="button" class="btn btn-secondary">No</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                </div>
+                            </div>
+                            <div class="row">  
+                                <div class="col-lg-9 p-r-0">
+                                    <div class="form-group">
+                                        <label for="two">Pension Coverage</label>
+                                        <br>
+                                        <div class="btn-group btn-group-sm" role="group" aria-label="">
+                                            <button type="button" class="btn btn-red white">Yes</button>
+                                            <button type="button" class="btn btn-secondary">No</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                </div>
+                            </div>
+                            <div class="row">  
+                                <div class="col-lg-9 p-r-0">
+                                    <div class="form-group">
+                                        <label for="two">Savings and Investments</label>
+                                        <br>
+                                        <div class="btn-group btn-group-sm" role="group" aria-label="">
+                                            <button type="button" class="btn btn-red white">Yes</button>
+                                            <button type="button" class="btn btn-secondary">No</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                </div>
+                                <div class="col-lg-9 p-r-0">
+                                    <a href="#" class="btn btn-red white full-width">Proceed to MFID Quesionnaire</a>
+                                </div>
+                            </div>
+                            
+                          </form>
+                          <br>
+                       </div> 
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <!-- <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+          <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div>
+      <br>
+    </div>
+  </footer>
+</body>
+
+</html>
