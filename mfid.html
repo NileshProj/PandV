@@ -72,37 +72,38 @@
       <nav class="col-md-2 d-none d-md-block bg-brown sidebar">
         <div class="sidebar-sticky ">
           <ul class="nav flex-column list-group  list-group-flush">
-            <li class="nav-item list-group-item bg-brown active">
-              <a class="nav-link active" href="#">
+            <li class="nav-item list-group-item bg-brown ">
+              <a class="nav-link " href="#">
                 <span data-feather="home"></span>
                 <i class="fa fa-user-circle fa-lg m-r-10" aria-hidden="true"></i>
                 Profile <span class="sr-only">(current)</span>
-                <i class="fa fa-arrow-left  white m-t-5 fa-lg float-right" aria-hidden="true"></i>
+                
               </a>
             </li>
             <li class="nav-item list-group-item bg-brown">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="simulation.html">
                 <span data-feather="file"></span>
                 <i class="fa fa-dashboard fa-lg m-r-10" aria-hidden="true"></i>
                 Simulations
               </a>
             </li>
             <li class="nav-item list-group-item bg-brown">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="need-analysis.html">
                 <span data-feather="file"></span>
                 <i class="fa fa-dashboard fa-lg m-r-10" aria-hidden="true"></i>
                 Need Analysis
               </a>
             </li>
-            <li class="nav-item list-group-item bg-brown">
-              <a class="nav-link" href="#">
+            <li class="nav-item list-group-item bg-brown active">
+              <a class="nav-link active" href="#">
                 <span data-feather="file"></span>
                 <i class="fa fa-dashboard fa-lg m-r-10" aria-hidden="true"></i>
                 MFID
+                <i class="fa fa-arrow-left  white m-t-5 fa-lg float-right" aria-hidden="true"></i>
               </a>
             </li>
             <li class="nav-item list-group-item bg-brown">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="product-selection.html">
                 <span data-feather="file"></span>
                 <i class="fa fa-dashboard fa-lg m-r-10" aria-hidden="true"></i>
                 Product Selection
@@ -123,61 +124,38 @@
               </a>
             </li>
           </ul>
+
+          
         </div>
       </nav>
     </div>
     <div class="row m-t-100">
       <div class="col-lg-2"></div>
       <div class="col-lg-10">
-        <div class="row m-t-10 custom-popover popover bs-popover-right">
-          <div class="arrow"></div>
-          <div class="row">
-            <div class="col-lg-3 p-r-0">
-              <ul class="nav list-group list-group-flush simulation-menu">
-                <li class="nav-item list-group-item">
-                  <a class="nav-link" href="#">
-                    Fiscal Optimization
-                  </a>
-                </li>
-                <li class="nav-item list-group-item bg-light">
-                  <a class="nav-link" href="#">
-                    80% Simulation
-                  </a>
-                </li>
-                <li class="nav-item list-group-item">
-                  <a class="nav-link" href="#">
-                    General Pension
-                  </a>
-                </li>
-                <li class="nav-item list-group-item">
-                  <a class="nav-link" href="#">
-                    Risk Capital
-                  </a>
-                </li>
-                <li class="nav-item list-group-item">
-                  <a class="nav-link" href="#">
-                    Investment
-                  </a>
-                </li>
-                <li class="nav-item list-group-item">
-                  <a class="nav-link" href="#">
-                    Target Savings
-                  </a>
-                </li>
-              </ul>
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active tab-name" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+              aria-controls="nav-home" aria-selected="true">Charl Robbrt > mfid</a>
+            <div class="btn-group dropright">
+              <i class="fa fa-plus-circle fa-2x m-l-10 m-t-5 text-red" id="dropdownMenu" data-toggle="dropdown"
+                data-reference="parent"></i>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+                <span class="dropdown-item-text">Offers</span>
+                <a class="dropdown-item" href="#">Contracts</a>
+                <a class="dropdown-item" href="#">Proposals</a>
+                <a class="dropdown-item" href="#">Documents</a>
+              </div>
             </div>
-            <div class="col-lg-9 p-l-0">
-              <div class="bg-light p-l-20 p-t-10" style="height: 100%;">
-                <h5 class="text-red">80% Simulation</h5>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                   a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                <h5 class="text-red">Recent Simulations</h5>   
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="row m-t-10">
+              <div class="col-lg-6">
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
