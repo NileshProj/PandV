@@ -196,11 +196,15 @@ body {
   .m-r-50 {
     margin-right: 50px;
   }
-
+  .p-t-10 {
+    padding-top: 10px;
+  }
   .p-l-10 {
     padding-left: 10px;
   }
-
+  .p-l-20 {
+    padding-left: 20px;
+  }
   .p-r-10 {
     padding-right: 10px;
   }
@@ -286,6 +290,7 @@ body {
     padding: 10px;
   }
 
+
   .card {
     height: 100%;
   }
@@ -351,3 +356,4 @@ body {
   width: 98%;
   max-width: 98%;
 }
+
