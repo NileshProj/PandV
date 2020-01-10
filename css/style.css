@@ -271,6 +271,9 @@ body {
   .text-red {
     color: rgb(189, 0, 57);
   }
+  .text-orange {
+    color: rgb(230, 74, 25);;
+  }
 
   .btn-red {
     background-color: rgb(230, 74, 25);
